@@ -43,7 +43,7 @@
         margin-right: 0.25rem;
     }
     .modal-footer > :not(:first-child) {
-        margin-left: 0.25rem;
+        margin-left: 1.25rem;
     }
     .btn-primary {
         border-color: #535BE2 !important;
@@ -51,7 +51,7 @@
         color: #FFFFFF;
     }
     .round {
-        border-radius: 1.5rem;
+        border-radius: 1.5rem !important;
     }
     .pull-right {
         float: right;
@@ -80,6 +80,10 @@
         line-height: 1.25;
         border-radius: 0.25rem;
         transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    button#btnManagePrince {
+        font-size: 13px;
+        float: right !important;
     }
     /* .Qty .text-center{
 
@@ -346,6 +350,7 @@
                 <div class="modal-content">
                 <div class="modal-header">
                     <h4 style="float: left" class="modal-title">Manage Price <span id="ProductIDNName" style="font-size: 14px; font-weight: bold">[ 87654321 - Test123 ]</span></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">
 
@@ -382,7 +387,7 @@
                                     </tr>
 
                                 </thead>
-                                <tbody>
+                                <tbody style="color: #000 !important;font-size: 14px;">
                                     <tr>
                                         <th scope="row">
                                             <input type="checkbox" class="create" name="create[0]" id="create1"
@@ -408,7 +413,7 @@
                                             <input type="checkbox" name="is_free[0]" id="is_free1" class="is_free"
                                                 {{ $piece && $piece->is_free == 1 ? 'Checked' : '' }}>
                                         </td>
-                                        <td class="Qty text-center">{{ $piece && $piece->qty ? $piece->qty : 0 }}</td>
+                                        <td class="Qty">{{ $piece && $piece->qty ? $piece->qty : 0 }}</td>
                                         <td>
                                             <input type="text" style="width:50px;" name="qty[]" id="qty1" min="1"
                                                 class="number" value="1" readonly>
@@ -477,7 +482,7 @@
                                         </td>
                                         <td>{{ $box && $box->qty ? $box->qty : 0 }}</td>
                                         <td>
-                                            <input type="text" style="width:50px;" name="qty[]" class="Qty text-center" id="qty2"
+                                            <input type="text" style="width:50px;" name="qty[]" class="Qty" id="qty2"
                                                 value="{{ $box && $box->qty ? $box->qty : 0 }}"
                                                 min="{{ $box && $box->qty ? $box->qty : 0 }}" class="number">
                                         </td>
@@ -591,8 +596,8 @@
                         <span><b style="color: red">Note - </b>Please check the Enable section check box to manage price.</span>
                     </div>
                     
-                    <button type="button" class="btn btn-primary buttonAnimation pull-right round box-shadow-1 btn-sm" onclick="checkDefault()">&nbsp;&nbsp;&nbsp;Update&nbsp;&nbsp;&nbsp;</button>
                     <button type="button" class="btn btn-danger buttonAnimation pull-right round box-shadow-1 btn-sm" data-dismiss="modal">&nbsp;&nbsp;&nbsp;Close&nbsp;&nbsp;&nbsp;</button>
+                    <button type="button" class="btn btn-primary buttonAnimation pull-right round box-shadow-1 btn-sm" onclick="checkDefault()">&nbsp;&nbsp;&nbsp;Update&nbsp;&nbsp;&nbsp;</button>
                 </div>
             </div>
         </div>

@@ -231,7 +231,7 @@
                 
             </div>
         @endcomponent
-        @component('components.widget', ['class' => 'box-primary'])
+        <!-- @component('components.widget', ['class' => 'box-primary'])
         <div class="row">
             <div class="table-responsive">
                 <table class="table table-bordered table-hover myNewClass" id="unit_price">
@@ -404,7 +404,7 @@
                 </table>
             </div>
         </div>
-        @endcomponent
+        @endcomponent -->
         <div class="row">
             <div class="col-sm-12">
                 <input type="hidden" name="submit_type" id="submit_type">
